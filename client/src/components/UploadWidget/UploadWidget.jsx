@@ -54,7 +54,7 @@ function UploadWidget({ uwConfig, setPublicId, setState }) {
         className="cloudinary-button"
         onClick={initializeCloudinaryWidget}
       >
-        Upload
+        Upload Images
       </button>
     </CloudinaryScriptContext.Provider>
   );

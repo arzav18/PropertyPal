@@ -81,6 +81,7 @@
       flex: 2;
     }
   }
+
   .smallImages {
     flex: 1;
     display: flex;
@@ -97,6 +98,47 @@
 
       @include sm {
         height: 80px;
+      }
+    }
+
+    .blurredImage {
+      position: relative;
+      height: 100px; // Ensure this matches your image size
+      filter: blur(4px); // Adjust blur effect as needed
+      border-radius: 10px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      // "+N more" overlay
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.8
+        ); // Dark background for better contrast
+        color: white;
+        font-size: 20px; // Increase font size for better visibility
+        font-weight: bold;
+        z-index: 1; // Ensure it's on top of the image
+        border-radius: 10px;
+
+        @include sm {
+          font-size: 18px; // Responsive font size
+        }
       }
     }
   }

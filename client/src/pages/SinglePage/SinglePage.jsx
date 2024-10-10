@@ -85,8 +85,8 @@ function SinglePage() {
             <div className="feature">
               <img src="/fee.png" alt="" />
               <div className="featureText">
-                <span>Income Policy</span>
-                <p>{post.postDetail.income}</p>
+                <span>Contact Number</span>
+                <p>{post.postDetail.number}</p>
               </div>
             </div>
           </div>

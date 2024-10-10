@@ -51,7 +51,7 @@ model postDetail {
   desc       String
   utilities  String?
   pet        String?
-  income     String?
+  number     String?
   size       Int?
   school     Int?
   bus        Int?

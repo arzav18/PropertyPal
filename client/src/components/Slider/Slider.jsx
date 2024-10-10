@@ -6,32 +6,26 @@ function Slider({ images }) {
 
   const changeSlide = (direction) => {
     if (direction === "left") {
-      if (imageIndex === 0) {
-        setImageIndex(images.length - 1);
-      } else {
-        setImageIndex(imageIndex - 1);
-      }
+      setImageIndex(imageIndex === 0 ? images.length - 1 : imageIndex - 1);
     } else {
-      if (imageIndex === images.length - 1) {
-        setImageIndex(0);
-      } else {
-        setImageIndex(imageIndex + 1);
-      }
+      setImageIndex(imageIndex === images.length - 1 ? 0 : imageIndex + 1);
     }
   };
+
+  const remainingImages = images.length > 4 ? images.length - 4 : 0;
 
   return (
     <div className="slider">
       {imageIndex !== null && (
         <div className="fullSlider">
           <div className="arrow" onClick={() => changeSlide("left")}>
-            <img src="/arrow.png" alt="" />
+            <img src="/arrow.png" alt="arrow left" />
           </div>
           <div className="imgContainer">
-            <img src={images[imageIndex]} alt="" />
+            <img src={images[imageIndex]} alt={`Image ${imageIndex + 1}`} />
           </div>
           <div className="arrow" onClick={() => changeSlide("right")}>
-            <img src="/arrow.png" className="right" alt="" />
+            <img src="/arrow.png" className="right" alt="arrow right" />
           </div>
           <div className="close" onClick={() => setImageIndex(null)}>
             X
@@ -39,17 +33,26 @@ function Slider({ images }) {
         </div>
       )}
       <div className="bigImage">
-        <img src={images[0]} alt="" onClick={() => setImageIndex(0)} />
+        <img
+          src={images[0]}
+          alt="Big preview"
+          onClick={() => setImageIndex(0)}
+        />
       </div>
       <div className="smallImages">
-        {images.slice(1).map((image, index) => (
+        {images.slice(1, 4).map((image, index) => (
           <img
             src={image}
-            alt=""
+            alt={`Small preview ${index + 1}`}
             key={index}
             onClick={() => setImageIndex(index + 1)}
           />
         ))}
+        {remainingImages > 0 && (
+          <div className="moreImages" onClick={() => setImageIndex(4)}>
+            +{remainingImages} more
+          </div>
+        )}
       </div>
     </div>
   );
