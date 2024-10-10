@@ -47,28 +47,28 @@ enum Property {
 }
 
 model postDetail {
-  id         String  @id @default(auto()) @map("_id") @db.ObjectId
-  desc       String
-  utilities  String?
-  pet        String?
-  number     String?
-  size       Int?
-  school     Int?
-  bus        Int?
-  restaurant Int?
-  post       Post    @relation(fields: [postId], references: [id])
-  postId     String  @unique @db.ObjectId
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  desc        String
+  utilities   String?
+  pet         String?
+  phoneNumber String?
+  size        Int?
+  school      Int?
+  bus         Int?
+  restaurant  Int?
+  post        Post    @relation(fields: [postId], references: [id])
+  postId      String  @unique @db.ObjectId
 }
 
 model SavedPost {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   user      User     @relation(fields: [userId], references: [id])
   post      Post     @relation(fields: [postId], references: [id])
-  userId    String   @unique @db.ObjectId
-  postId    String   @unique @db.ObjectId
+  userId    String   @db.ObjectId
+  postId    String   @db.ObjectId
   createdAt DateTime @default(now())
 
-  @@unique([userId, postId])
+  @@unique([userId, postId]) // Keep this line
 }
 
 model User {

@@ -37,7 +37,7 @@ function NewPostPage() {
           desc: value,
           utilities: inputs.utilities,
           pet: inputs.pet,
-          number: inputs.number,
+          phoneNumber: inputs.phoneNumber,
           size: parseInt(inputs.size),
           school: parseInt(inputs.school),
           bus: parseInt(inputs.bus),
@@ -78,11 +78,11 @@ function NewPostPage() {
               <input id="city" name="city" type="text" />
             </div>
             <div className="item">
-              <label htmlFor="bedroom">Number of Bedroom</label>
+              <label htmlFor="bedroom">Number of Bedrooms</label>
               <input min={1} id="bedroom" name="bedroom" type="number" />
             </div>
             <div className="item">
-              <label htmlFor="bathroom">Number of Bathroom</label>
+              <label htmlFor="bathroom">Number of Bathrooms</label>
               <input min={1} id="bathroom" name="bathroom" type="number" />
             </div>
             <div className="item">
@@ -128,10 +128,10 @@ function NewPostPage() {
               </select>
             </div>
             <div className="item">
-              <label htmlFor="number">Contact Number</label>
+              <label htmlFor="phoneNumber">Contact Number</label>
               <input
-                id="number"
-                name="number"
+                id="phoneNumber"
+                name="phoneNumber"
                 type="text"
                 placeholder="Contact Number"
               />

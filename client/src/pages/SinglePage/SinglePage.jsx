@@ -86,7 +86,7 @@ function SinglePage() {
               <img src="/fee.png" alt="" />
               <div className="featureText">
                 <span>Contact Number</span>
-                <p>{post.postDetail.number}</p>
+                <p>{post.postDetail.phoneNumber}</p>
               </div>
             </div>
           </div>
