@@ -1,0 +1,92 @@
+.contactPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+
+  .textContainer {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 12px; /* Slightly increased radius */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    padding: 30px; /* Increased padding for more space */
+    transition: box-shadow 0.3s ease; /* Smooth transition effect */
+
+    &:hover {
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+    }
+  }
+
+  .wrapper {
+    text-align: center;
+
+    .title {
+      font-size: 2.5rem; /* Larger title */
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: 600; /* Bolder title */
+    }
+
+    p {
+      margin-bottom: 30px; /* More space below paragraph */
+      color: #555; /* Darker gray for better readability */
+      font-size: 1.1rem; /* Slightly larger font */
+    }
+
+    .contactDetails {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px; /* Increased gap for better spacing */
+
+      .detail {
+        display: flex;
+        align-items: center;
+        color: #333;
+        background-color: #f0f8ff; /* Light background for details */
+        padding: 10px; /* Padding around each detail */
+        border-radius: 8px; /* Rounded corners for details */
+        transition: background-color 0.3s ease; /* Smooth background transition */
+
+        &:hover {
+          background-color: #e6f7ff; /* Highlight on hover */
+        }
+
+        .icon {
+          margin-right: 15px; /* More space between icon and text */
+          color: #007bff; /* Color for the icons */
+          font-size: 1.5rem; /* Slightly larger icons */
+        }
+
+        strong {
+          margin-right: 8px; /* Space between label and value */
+          color: #000; /* Color for labels */
+        }
+
+        a {
+          color: #007bff; /* Link color */
+          text-decoration: none; /* Remove underline from links */
+          transition: color 0.3s ease; /* Smooth transition for links */
+
+          &:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #0056b3; /* Darker color on hover */
+          }
+        }
+      }
+    }
+  }
+
+  .imgContainer {
+    margin-top: 20px; /* More space above image */
+
+    img {
+      width: 100%;
+      max-width: 600px; /* Limit max width for responsiveness */
+      border-radius: 8px;
+    }
+  }
+}

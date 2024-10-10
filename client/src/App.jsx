@@ -13,6 +13,7 @@ import {
   profilePageLoader,
   singlePageLoader,
 } from "./lib/loaders";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -28,6 +29,11 @@ function App() {
           path: "/list",
           element: <ListPage />,
           loader: listPageLoader,
+        },
+        {
+          path: "/contact",
+          element: <ContactPage />,
+          // loader: listPageLoader,
         },
         {
           path: "/:id",
