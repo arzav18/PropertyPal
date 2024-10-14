@@ -14,6 +14,7 @@ import {
   singlePageLoader,
 } from "./lib/loaders";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import About from "./pages/About/About";
 
 function App() {
   const router = createBrowserRouter([
@@ -33,6 +34,11 @@ function App() {
         {
           path: "/contact",
           element: <ContactPage />,
+          // loader: listPageLoader,
+        },
+        {
+          path: "/about",
+          element: <About />,
           // loader: listPageLoader,
         },
         {

@@ -11,7 +11,7 @@ function HomePage() {
     <div className="homePage">
       <div className="textContainer">
         <div className="wrapper">
-          <h1 className="title">Find Real Estate and get your dream place</h1>
+          <h1 className="title">Find your dream place!</h1>
           <p>
             Your Home, Your Haven. Discover your dream home with us. We are here
             to help you find the perfect living space that suits your lifestyle
