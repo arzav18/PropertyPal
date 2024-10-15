@@ -1,7 +1,3 @@
-Here’s a detailed `README.md` file for your project, explaining the technologies, setup, and features:
-
----
-
 # Real Estate Application - MERN Stack
 
 ## Table of Contents
@@ -217,8 +213,6 @@ The application uses **React Router DOM** for navigation between pages. Some of 
 - `/login`: User login page
 - `/register`: User registration page
 - `/property/:id`: Single property detail page
-
----
 
 ## License
 
