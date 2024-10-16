@@ -1,4 +1,4 @@
-# PropertyPal - MERN Stack
+# PropertyPal – Discover Your Space
 
 ## Table of Contents
 
