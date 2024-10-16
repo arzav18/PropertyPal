@@ -50,16 +50,27 @@
 ## Features
 
 - **User Authentication**: Users can sign up, log in, and maintain sessions using JWT tokens stored in cookies.
+
+   
 ![Screenshot (8)](https://github.com/user-attachments/assets/d2411ac3-0ea9-484b-94a0-ba53e12bff7c)
 ![Screenshot (9)](https://github.com/user-attachments/assets/855145e8-4db3-403f-ab88-e398841e980b)
 
+
 - **Property Listings**: Browse property listings, view details, and save properties to user profiles.
+
+  
   ![Screenshot (2)](https://github.com/user-attachments/assets/d64513c6-801a-4e7c-ab8a-1170c9a91f8a)
 
+
 - **Save Posts**: Users can save properties to their favorites, and the state is preserved even after a page refresh.
+
+  
   ![Screenshot (3)](https://github.com/user-attachments/assets/e71e1c46-17b2-4589-8cfe-56856674dbcc)
 
+
 - **Real-time Chat**: Chat with other users about properties using Socket.io for real-time messaging.
+
+  
   <img width="299" alt="image" src="https://github.com/user-attachments/assets/2a111974-1247-4d5f-98f0-ba3132a19c0d">
 
 - **Responsive Design**: The application is mobile-friendly and adapts to different screen sizes.
