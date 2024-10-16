@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import apiRequest from "../../lib/apiRequest";
-import { toast } from "react-toastify"; // Import toast for notifications
+import { toast } from "react-toastify";
 
 function Card({ item }) {
   const { currentUser } = useContext(AuthContext);
@@ -38,11 +38,11 @@ function Card({ item }) {
     localStorage.setItem("savedPosts", JSON.stringify(savedPosts)); // Update localStorage
 
     try {
-      await apiRequest.post("/users/save", { postId: item.id }); // Use item.id here
+      await apiRequest.post("/users/save", { postId: item.id });
     } catch (err) {
       console.log(err);
       setSaved((prev) => !prev); // Revert the save state on error
-      toast.error("Failed to save the post"); // Show error message
+      toast.error("Failed to save the post");
     }
   };
 
@@ -86,7 +86,7 @@ function Card({ item }) {
                 alt=""
                 style={{
                   cursor: "pointer", // Change cursor to pointer to indicate it's clickable
-                  filter: saved ? "none" : "grayscale(100%)", // Optional: Add a grayscale effect when unsaved
+                  filter: saved ? "none" : "grayscale(100%)", // Add a grayscale effect when unsaved
                 }}
               />
             </div>

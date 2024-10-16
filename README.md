@@ -1,6 +1,7 @@
-# Real Estate Application - MERN Stack
+# PropertyPal - MERN Stack
 
 ## Table of Contents
+
 - [Introduction](#introduction)
 - [Technologies Used](#technologies-used)
 - [Features](#features)
@@ -18,19 +19,21 @@
 
 ## Introduction
 
-This is a **Real Estate Application** built using the **MERN stack** (MongoDB, Express, React, Node.js) along with **Prisma** ORM. The application allows users to browse, save, and chat about properties. It also implements user authentication, state management, and real-time messaging between users using **WebSockets**. The project demonstrates a full-stack web application with both backend and frontend integration.
+**PropertyPal** is a Real Estate Application built using the **MERN stack** (MongoDB, Express, React, Node.js) along with **Prisma** ORM. The application allows users to browse, save, and chat about properties. It also implements user authentication, state management, and real-time messaging between users using **WebSockets**. The project demonstrates a full-stack web application with both backend and frontend integration.
 
 ---
 
 ## Technologies Used
 
 ### Frontend:
+
 - **React**: For building the user interface and component-based structure.
 - **React Router DOM**: For handling routing between different pages in the application.
 - **Context API**: For state management across components, particularly user authentication and saved properties.
 - **Cookies**: For managing user sessions and JWT tokens on the client-side.
 
 ### Backend:
+
 - **Node.js**: For building the backend server using Express.js.
 - **Express.js**: The server framework for handling HTTP requests and routing.
 - **MongoDB**: As the database to store user data, property listings, and chat history.
@@ -48,12 +51,13 @@ This is a **Real Estate Application** built using the **MERN stack** (MongoDB, E
 - **Save Posts**: Users can save properties to their favorites, and the state is preserved even after a page refresh.
 - **Real-time Chat**: Chat with other users about properties using Socket.io for real-time messaging.
 - **Responsive Design**: The application is mobile-friendly and adapts to different screen sizes.
-  
+
 ---
 
 ## Installation
 
 ### Prerequisites
+
 - **Node.js** (v14+)
 - **MongoDB** (Set up a local instance or use a cloud service like MongoDB Atlas)
 - **Prisma** (You’ll need to set up Prisma with MongoDB)
@@ -61,14 +65,16 @@ This is a **Real Estate Application** built using the **MERN stack** (MongoDB, E
 ### Steps to Install:
 
 1. **Clone the repository**:
+
    ```bash
-   git clone https://github.com/username/real-estate-app.git
-   cd real-estate-app
+   git clone https://github.com/arzav18/PropertyPal.git
+   cd PropertyPal
    ```
 
 2. **Install dependencies for both backend and frontend**:
 
    - Backend:
+
      ```bash
      cd api
      npm install
@@ -76,23 +82,24 @@ This is a **Real Estate Application** built using the **MERN stack** (MongoDB, E
 
    - Frontend:
      ```bash
-     cd frontend
+     cd client
      npm install
      ```
 
 3. **Set up environment variables**:
 
    Create a `.env` file in the `api` folder with the following variables:
+
    ```bash
-   PORT=5000
-   MONGO_URI=mongodb://localhost:27017/realestate
+   DATABASE_URL=your_mongo_db_url
    JWT_SECRET=your_jwt_secret_key
-   SOCKET_PORT=5001
+   CLIENT_URL=http://localhost:5173
    ```
 
 4. **Set up Prisma with MongoDB**:
 
    Run the following commands to set up Prisma:
+
    ```bash
    npx prisma init
    npx prisma db push
@@ -101,69 +108,54 @@ This is a **Real Estate Application** built using the **MERN stack** (MongoDB, E
    This will generate the Prisma schema and synchronize the MongoDB database.
 
 5. **Run the backend server**:
+
    ```bash
-   npm start
+   cd api
+   nodemon app.js
    ```
 
 6. **Run the frontend**:
+
    ```bash
-   cd frontend
-   npm start
+   cd client
+   npm run dev
    ```
 
----
-
-## Project Structure
-
-```bash
-├── api               # Backend Node.js + Express.js
-│   ├── controllers   # API request handlers
-│   ├── models        # Mongoose + Prisma models for database
-│   ├── routes        # Express routes
-│   ├── sockets       # Socket.io setup for real-time chat
-│   └── .env          # Environment variables
-└── frontend          # React Frontend
-    ├── components    # Reusable React components
-    ├── context       # Context API for global state
-    ├── pages         # Page components for different views
-    ├── services      # API request handling
-    ├── .env          # Environment variables for frontend
-```
+7. **Run the socket (for chat)**:
+   ```bash
+   cd socket
+   nodemon app.js
+   ```
 
 ---
 
 ## Usage
 
 1. **Sign Up and Login**:
+
    - Navigate to the sign-up page and create a new account.
    - Log in with your credentials to browse and save properties.
 
 2. **Save Posts**:
-   - You can save posts by clicking the **Save** button. Saved posts will persist even after refreshing the page, thanks to state management and the backend integration.
+
+   - You can save posts by clicking the **Save the Place** button. Saved posts will persist even after refreshing the page.
 
 3. **Chat in Real-Time**:
+
    - Users can chat with each other using the real-time messaging feature powered by **Socket.io**.
 
 4. **Browse Properties**:
-   - Explore different properties and view detailed information, including images, prices, and locations.
+   - Explore different properties and view detailed information, including images, prices, contact information and locations.
 
 ---
 
 ## API Endpoints
 
 ### Authentication
+
 - `POST /auth/register`: Register a new user
 - `POST /auth/login`: Log in an existing user
 - `POST /auth/logout`: Log out the user
-
-### Property Listings
-- `GET /properties`: Fetch all property listings
-- `POST /properties/save`: Save a property to user’s favorites
-- `GET /properties/:id`: Get details of a specific property
-
-### Chat
-- `GET /chat`: Fetch chat history
-- `POST /chat`: Send a message between users
 
 ---
 
@@ -198,6 +190,7 @@ User authentication is managed using **JWT** tokens. When a user logs in, a JWT 
 ## Context API
 
 The **Context API** is used to manage global state across the application, including:
+
 - User authentication state
 - Saved posts
 - Real-time chat data
@@ -209,15 +202,14 @@ This helps share state between different components without the need for prop dr
 ## React Router
 
 The application uses **React Router DOM** for navigation between pages. Some of the key routes include:
-- `/`: Home page listing all properties
+
+- `/`: Home page
 - `/login`: User login page
 - `/register`: User registration page
-- `/property/:id`: Single property detail page
+- `/list`: Property detail page
 
 ## License
 
 This project is licensed under the MIT License.
 
 ---
-
-Feel free to modify this README file as needed for your project!
