@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "93311bcd-c54e-4662-bcec-8d5626e12760",
+		"name": "Estate App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30024983"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"john\",\r\n    \"email\": \"john@mail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"arzav\",\r\n    \"password\": \"arzav@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"arzav18\",\r\n    \"password\": \"arzav@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/api/auth/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "Protected Route Test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/api/test/should-be-logged-in",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"test",
+								"should-be-logged-in"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/api/users/66f3b56fa1c302a1f34ac7e9",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"users",
+								"66f3b56fa1c302a1f34ac7e9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"john5\",\r\n    \"email\": \"john@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/api/users/66f299a2c793c00252eccc29",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"users",
+								"66f299a2c793c00252eccc29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/api/users/123",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"users",
+								"123"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Get Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/api/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/api/posts/6703bf463292990e8262cd65",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"posts",
+								"6703bf463292990e8262cd65"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postData\":{\r\n            \"id\": \"66f14906d0f85f6b47f90745\",\r\n            \"title\": \"title2\",\r\n            \"price\": 1200,\r\n            \"images\": [\r\n                \"https://res.cloudinary.com/arzav/image/upload/v1728217328/avatars/uepte9oohpwtklbwppnk.jpg\",\r\n                \"https://res.cloudinary.com/arzav/image/upload/v1728217328/avatars/uepte9oohpwtklbwppnk.jpg\"\r\n                ],       \r\n            \"address\": \"address1\",\r\n            \"city\": \"city1\", \r\n            \"bedroom\": 1,\r\n            \"bathroom\": 1,\r\n            \"latitude\"  : \"0.0.0.0\",\r\n            \"longitude\" : \"0.0.0.0.1\",\r\n            \"type\"      : \"rent\",\r\n            \"property\"  : \"apartment\",\r\n            \"createdAt\"  : \"2024-03-15T12:22:05.574Z\",\r\n            \"userId\"  : \"123456\"     \r\n            },\r\n    \"postDetail\": {\r\n            \"desc\"       : \"desc 1\",\r\n            \"utilities\"  : \"renter is responsible\",\r\n            \"pet\"        : \"allowed\",\r\n            \"income\"     : \"3x rent\",\r\n            \"size\"       : 1000,\r\n            \"school\"     : 1200,\r\n            \"bus\"        : 100,\r\n            \"restaurant\": 1500\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/api/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"670675758ea4e5dca43a5b62\",\r\n        \"title\": \"Apartment - 5\",\r\n        \"price\": 60000000,\r\n        \"images\": [\r\n            \"https://res.cloudinary.com/arzav/image/upload/v1728476527/posts/vhurluo2lmb2eaiiajgc.jpg\",\r\n            \"https://res.cloudinary.com/arzav/image/upload/v1728476527/posts/x5mbn7opqkh72zgmbb7v.jpg\",\r\n            \"https://res.cloudinary.com/arzav/image/upload/v1728476528/posts/otqkqrfd1cmfxzyjrqvc.jpg\",\r\n            \"https://res.cloudinary.com/arzav/image/upload/v1728476528/posts/mqaxduuphzohmmetgh4n.jpg\",\r\n            \"https://res.cloudinary.com/arzav/image/upload/v1728476528/posts/do8qufsxitbzrdxokxnp.jpg\"\r\n        ],\r\n        \"address\": \"Tower-A, Worli, Mumbai-400018\",\r\n        \"city\": \"Mumbai\",\r\n        \"bedroom\": 5,\r\n        \"bathroom\": 4,\r\n        \"latitude\": \"19.0760\",\r\n        \"longitude\": \"72.8777\",\r\n        \"type\": \"rent\",\r\n        \"property\": \"condo\",\r\n        \"createdAt\": \"2024-10-09T12:22:13.843Z\",\r\n        \"userId\": \"66f14906d0f85f6b47f90745\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/api/posts/670675758ea4e5dca43a5b62",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"posts",
+								"670675758ea4e5dca43a5b62"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/api/posts/6704e68bf865fd35d5da6837",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"posts",
+								"6704e68bf865fd35d5da6837"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chats",
+			"item": [
+				{
+					"name": "Get Chats",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/api/chats",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"chats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Chat",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/api/chats/67052aaf28625092ab4d03db",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"chats",
+								"67052aaf28625092ab4d03db"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Chat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"receiverId\": \"6705047650a2c3be36d643d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/api/chats/",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"chats",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Chat",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8800/api/chats/read/id",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"chats",
+								"read",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "Add Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"first message\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8800/api/messages/67052aaf28625092ab4d03db",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"messages",
+								"67052aaf28625092ab4d03db"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
